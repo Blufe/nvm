@@ -97,6 +97,10 @@ Everything is explained [here](https://github.com/hipsnip-cookbooks/cookbook-dev
 
     bundle exec rake cookbook:full_test
 
+## TODO
+
+Add configurable option to use cpus when compiling from sources
+
 ## Licence
 
 Author: Rémy Loubradou
