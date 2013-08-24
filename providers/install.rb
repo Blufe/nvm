@@ -20,11 +20,12 @@
 action :create do
 	from_source_message = new_resource.from_source ? ' from source' : ''
 	from_source_arg = new_resource.from_source ? '-s' : ''
-	bash "Installing node.js #{new_resource.version}#{from_source_message}..." do
+	bash "Installing node.js #{new_resource.version}#{from_source_message} as user #{node['nvm']['user']}..." do
 		code <<-EOH
 			#{node['nvm']['source']}
 			nvm install #{from_source_arg} #{new_resource.version}
 		EOH
+		user node['nvm']['user']
 	end
 	# break FC021: Resource condition in provider may not behave as expected
 	# silly thing because new_resource.version is dynamic not fixed

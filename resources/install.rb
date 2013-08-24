@@ -21,5 +21,6 @@ actions :create
 default_action :create
 
 attribute :version, :kind_of => String, :name_attribute => true
+attribute :user, :kind_of => String, :name_attribute => true
 attribute :from_source, :kind_of => [TrueClass, FalseClass], :default => false
 attribute :alias_as_default, :kind_of => [TrueClass, FalseClass], :default => false
