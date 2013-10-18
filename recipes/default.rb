@@ -22,8 +22,10 @@ include_recipe 'git'
 ############################################################################
 # Install dependencies
 
-package 'libcurl3' do
-  action :install
+if node["platform"] == "ubuntu"
+  package 'libcurl3' do
+    action :install
+  end
 end
 
 package 'curl' do
