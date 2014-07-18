@@ -24,3 +24,5 @@ default['nvm']['source'] = '/etc/profile.d/nvm.sh'
 default['nvm']['install_deps_to_build_from_source'] = true
 default['nvm']['user'] = 'root'
 default['nvm']['group'] = default['nvm']['user']
+
+default["nvm"]["nodejs"] = []
