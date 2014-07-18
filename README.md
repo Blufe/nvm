@@ -33,6 +33,7 @@ For more usage examples, have a look to the recipes in `test/cookbooks/nvm_test/
 * `node['nvm']['source']` - command to source nvm script file, default 'source /etc/profile.d/nvm.sh'
 * `node['nvm']['install_deps_to_build_from_source']` - if true install the dependencies to compile node, otherwise not, default true
 * `node['nvm']['user']` - the user installing nvm, default 'root'
+* `node['nvm']['group']` - the group installing nvm, default 'root'
 
 ## LWRPs
 
@@ -50,6 +51,7 @@ Install a node.js version from source or binaries
 - `from_source` - install from source if true, default to false
 - `alias_as_default` - alias the current version as the default version, default true
 - `user` - the user installing nvm, default 'root'
+- `group` - the group installing nvm, default 'root'
 
 #### Examples
 

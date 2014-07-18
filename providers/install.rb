@@ -26,6 +26,7 @@ action :create do
 			nvm install #{from_source_arg} #{new_resource.version}
 		EOH
 		user node['nvm']['user']
+                group node['nvm']['group'] 
 	end
 	# break FC021: Resource condition in provider may not behave as expected
 	# silly thing because new_resource.version is dynamic not fixed

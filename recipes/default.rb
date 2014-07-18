@@ -47,6 +47,7 @@ git node['nvm']['directory'] do
   reference node['nvm']['reference']
   action :sync
   user node['nvm']['user']
+  group node['nvm']['group']
 end
 
 #############################################################################
@@ -55,4 +56,6 @@ end
 template '/etc/profile.d/nvm.sh' do
   source 'nvm.sh.erb'
   mode 0755
+  owner 'root'
+  group 'root'
 end
