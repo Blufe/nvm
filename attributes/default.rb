@@ -17,10 +17,10 @@
 # limitations under the License.
 #
 
-default['nvm']['directory'] = '/usr/local/src/nvm'
+default['nvm']['directory'] = '/usr/local/lib/nvm'
 default['nvm']['repository'] = 'git://github.com/creationix/nvm.git'
 default['nvm']['reference'] = 'master'
-default['nvm']['source'] = 'source /etc/profile.d/nvm.sh'
+default['nvm']['source'] = '/etc/profile.d/nvm.sh'
 default['nvm']['install_deps_to_build_from_source'] = true
 default['nvm']['user'] = 'root'
 default['nvm']['group'] = default['nvm']['user']

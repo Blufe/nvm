@@ -17,28 +17,20 @@
 # limitations under the License.
 #
 
-include_recipe 'git'
-
 ############################################################################
 # Install dependencies
+include_recipe 'git'
 
-if node["platform"] == "ubuntu"
-  package 'libcurl3' do
-    action :install
-  end
+if node['nvm']['install_deps_to_build_from_source']
+  include_recipe 'build-essential'
+end
+
+package 'libcurl' do
+  action :install
 end
 
 package 'curl' do
   action :install
-end
-
-if node['nvm']['install_deps_to_build_from_source']
-  package 'build-essential' do
-    action :install
-  end
-  package 'libssl-dev' do
-    action :install
-  end
 end
 
 ############################################################################

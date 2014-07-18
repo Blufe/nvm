@@ -6,4 +6,4 @@ metadata.json
 .vagrant
 vendor.kitchen/
 .kitchen
-*.tar.gz
+*.tar.gz.kitchen.local.yml
