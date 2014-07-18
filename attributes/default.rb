@@ -22,3 +22,4 @@ default['nvm']['repository'] = 'git://github.com/creationix/nvm.git'
 default['nvm']['reference'] = 'master'
 default['nvm']['source'] = 'source /etc/profile.d/nvm.sh'
 default['nvm']['install_deps_to_build_from_source'] = true
+default['nvm']['user'] = 'root'

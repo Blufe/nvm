@@ -46,6 +46,7 @@ git node['nvm']['directory'] do
   repository node['nvm']['repository']
   reference node['nvm']['reference']
   action :sync
+  user node['nvm']['user']
 end
 
 #############################################################################
